@@ -1,0 +1,89 @@
+<html lang="pt-br">
+    <head>
+        <title>Testando conhecimento com formulários</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
+            <script type="text/javascript" src="js/libs/jqueryui/jquery-ui.js"></script>
+    </head>
+    <body>
+        <form name="formulario" id="formulario" method="post" action="index.php">
+            <h1>Cadastre-se</h1><br><br>
+            <label for="comida">Escolha uma comida</label>
+                <input type="text" name="comida" id="comida" list="comidas"/>
+                    <datalist id="comidas">
+                        <option name="1">Macarrão</option>
+                        <option name="2">Arroz</option>
+                        <option name="3">Feijão</option>
+                        <option name="4">Milho</option>
+                        <option name="5">Abacate</option>
+                    </datalist><br><br>
+            <label for="data">Data de nascimento:</label>
+                <input type="date" name="data" id="datanasc"/><br><br>
+            <label for="hora">Hora do cadastro:</label>
+                <input type="time" name="hora" id="horacadastro"/><br><br>
+            <label for="semana">Semana do ano:</label>
+                <input type="week" name="semana" id="semana"/><br><br>
+            <label for="mes">Mês do ano:</label>
+                <input type="month" name="mes" id="mes"/><br><br>
+             <label for="misto">Misto:</label>
+                <input type="datetime-local" name="misto" id="misto"/><br><br>
+  
+   <label for="comentario">Digite seu comentário:</label><br>
+                <textarea maxlength="30" minlength="10" rows="8" cols="50" name="comentario" id="comentario"></textarea>                              
+                    <br><br><br><br>
+                            <button type="submit">Enviar</button>
+
+                            <input type="submit" name="Enviar" value="Mandar"/><br/><br/>
+<input type="reset" name="resetar" value="Excluir" /><br/><br/>
+<button type="button" onclick="alert('Olá!')" class="button é mais estilizável que input">Javascript</button><br/><br/>
+<input type="image" name="image" value="Imagem">
+        </form>  
+
+		<a href="#conteudo">Link de ancoragem</a><br/>
+		<a href="https://www.youtube.com/watch?v=By9i_FhBScc&list=TLGGbmIlnKrJd2szMTAxMjAxOQ&index=2" target="_blank">Ajuda</a>
+		
+		<div class="espaco"></div>
+		<div id="conteudo">Olá, Fábio, é de grande gosto ver seu empenho perante a desvalorização que este canal tem recebido. Mas, esse desvalor é meramente numérico, o qualitativo encontra-se presente. Percebo que em média, nos vídeos tem recebido cerca de 300 views. Mas, tenho certeza que esses 300 que vieram tendem a permanecer, assim como eu permaneço aqui já há 2 anos.﻿Olá, Fábio, é de grande gosto ver seu empenho perante a desvalorização que este canal tem recebido. Mas, esse desvalor é meramente numérico, o qualitativo encontra-se presente. Percebo que em média, nos vídeos tem recebido cerca de 300 views. Mas, tenho certeza que esses 300 que vieram tendem a permanecer, assim como eu permaneço aqui já há 2 anos.﻿</div>
+        <style type="text/css">
+            
+            textarea{
+                resize:none;
+            }
+            textarea:invalid{
+                animation: aaa 0.5s infinite;
+            }
+
+            @keyframes aaa{
+               0%   {background-color:red;}
+              25%  {background-color:yellow;}
+              50%  {background-color:blue;}
+              75%  {background-color:green;}
+              100% {background-color:red;}
+            }
+			
+			.espaco{
+				height:1000px;
+			}
+			
+			a:link{
+				color:red;
+				text-decoration:none;
+			}
+			
+			a:visited{
+				color:green;
+			}
+			
+			a:hover{
+				text-decoration:underline;
+				background-color:orangered;
+			}
+			
+			a:active{
+				background-color:black;
+			}
+			
+        </style>  
+    </body>
+</html>

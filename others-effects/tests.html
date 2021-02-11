@@ -1,0 +1,160 @@
+<div class="profilebox profilebox1" id="mndlgn">
+    <div class="profileInfo">
+        <h3>Educ. Infantil</h3>
+    </div>
+</div>
+
+
+<div class="profilebox profilebox2">
+    <div class="profileInfo">
+        <h3>Ens. Fund I</h3>
+    </div>
+</div>
+
+
+<div class="profilebox profilebox3">
+    <div class="profileInfo">
+        <h3>Ens. Fund II</h3>
+    </div>
+</div>
+
+<div class="profilebox profilebox4">
+    <div class="profileInfo">
+        <h3>Ens. Médio</h3>
+    </div>
+</div>
+
+<div class="profilebox profilebox5">
+    <div class="profileInfo">
+        <h3>Pré-Vestibular</h3>
+    </div>
+</div>
+
+<style type="text/css">
+
+	@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900');
+	@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,300,400,500,600,700,800');
+
+	body {
+		color: #6b6b6b;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+.profilebox {
+	width: 175px;
+	height: 150px;
+	background: #eee;
+	cursor: pointer;
+	float: left;
+	margin: 30px;
+}
+
+.profilebox1 {
+	background-image: url("https://image.ibb.co/kzeSqw/lunch1.jpg");
+	background-position: center center;
+	background-size: cover;
+	perspective: 450px;
+	position: relative;
+}
+
+.profilebox2 {
+	background-image: url("https://image.ibb.co/kzeSqw/lunch1.jpg");
+	background-position: center center;
+	background-size: cover;
+	perspective: 450px;
+	position: relative;
+}
+
+.profilebox3 {
+	background-image: url("https://image.ibb.co/kzeSqw/lunch1.jpg");
+	background-position: center center;
+	background-size: cover;
+	perspective: 450px;
+	position: relative;
+}
+
+.profilebox4 {
+	background-image: url("https://image.ibb.co/kzeSqw/lunch1.jpg");
+	background-position: center center;
+	background-size: cover;
+	perspective: 450px;
+	position: relative;
+}
+
+.profilebox5 {
+	background-image: url("https://image.ibb.co/kzeSqw/lunch1.jpg");
+	background-position: center center;
+	background-size: cover;
+	perspective: 450px;
+	position: relative;
+}
+
+.profilebox .SocialIcons {
+	display: flex;
+	flex-direction: column;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 15px;
+	transform: rotateY(90deg);
+	transform-origin: left center 0;
+	transition: all 350ms ease;
+}
+
+.profilebox .SocialIcons a {
+	background: #ffffff none repeat scroll 0 0;
+	font-size: 20px;
+	height: 50px;
+	margin-bottom: 1px;
+	position: relative;
+	text-align: center;
+	width: 50px;
+}
+
+.profilebox .SocialIcons a i {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.profilebox .SocialIcons a:nth-child(1) {
+}
+.profilebox .SocialIcons a:nth-child(2) {
+}
+.profilebox .SocialIcons a:nth-child(3) {
+}
+.profilebox:hover .SocialIcons {
+	opacity: 1;
+	left: 15px;
+	transform: rotateY(0deg);
+}
+.profilebox .profileInfo {
+	background: #ffffff none repeat scroll 0 0;
+	bottom: 0;
+	height: 50px;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	width: 90%;
+	transform: rotatex(90deg);
+	transform-origin: bottom center 0;
+	transition: all 350ms ease;
+	opacity: 0;
+}
+.profilebox .profileInfo h3 {
+	font-size: 20px;
+	margin: 15px 0;
+	text-align: center;
+}
+.profilebox:hover .profileInfo {
+	opacity: 1;
+	bottom: 15px;
+	transform: rotatex(0deg);
+}
+
+
+</style>

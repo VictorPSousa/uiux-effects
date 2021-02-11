@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+font-family: 'Inconsolata', monospace;
+  background: #FFF;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text label{
+  font-size: 78px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+label span{
+  position: relative;
+  color: #000;
+  z-index: 2;
+}
+label span:hover{
+  filter: blur(1px);
+}
+.text label::before,
+.text label::after{
+  position: absolute;
+  content: attr(data-content);
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.text:hover label::before,
+.text:hover label::after{
+  visibility: visible;
+}
+.text:hover label::before{
+  color: #FFF;
+  animation: glitch .5s cubic-bezier(.25,.46,.45,.94) both infinite;
+}
+.text:hover label::after{
+  color: #FF6F00;
+  animation: glitch .6s cubic-bezier(.25,.46,.45,.94) reverse both infinite;
+}
+@keyframes glitch {
+  0%{
+    transform: translate(0);
+  }
+  20%{
+    transform: translate(-3px, 3px);
+  }
+  40%{
+    transform: translate(-3px, -3px);
+  }
+  60%{
+    transform: translate(3px, 3px);
+  }
+  80%{
+    transform: translate(3px, -3px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+
+a.tip {
+    border-bottom: 1px dashed;
+    text-decoration: none
+}
+a.tip:hover {
+    cursor: help;
+    position: relative
+}
+a.tip span {
+    display: none
+}
+a.tip:hover span {
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background: url(../images/status-info.png) #f0f0f0 no-repeat 100% 5%;
+    left: 0px;
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    text-decoration: none
+}
