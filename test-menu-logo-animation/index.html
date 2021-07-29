@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style type="text/css">
+    	*, html, body{
+    		margin: 0;
+    		padding: 0;
+    	}
+
+    	header{
+    		text-align: center;
+    		justify-content: center;
+    		height: 100vh;
+    		background: #9575cd;
+    		display: flex;
+  			align-items: center;
+    	}
+
+    	#logo{
+    		width: 30%;
+    		transition: .6s;
+    	}
+
+    	.fixa{
+    		top: 1rem;
+    		width: 10% !important;
+    		position: fixed;
+    	}
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+    	<img src="https://clipart-best.com/img/heart/heart-clip-art-4.png" id="logo" />
+    </header>
+    <main style="height: 2000px;"></main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    	
+    	$(document).ready(function(){
+			$(window).scroll(function(){
+				let logo = $("#logo");
+				if(($(window).height() + $(window).scrollTop()) > $("#cabecalho").height() + 500){
+					logo.addClass("fixa");
+				}else{
+					logo.removeClass("fixa");
+				}
+		    });
+    	});
+
+    </script>
+</body>
+</html>
