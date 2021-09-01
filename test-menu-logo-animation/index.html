@@ -43,10 +43,13 @@
     	
     	$(document).ready(function(){
 			$(window).scroll(function(){
+				let logo_topo = $("#logo").position().top;
 				let logo = $("#logo");
-				if(($(window).height() + $(window).scrollTop()) > $("#cabecalho").height() + 500){
+				if(($(window).height() + $(window).scrollTop()) > $("#cabecalho").height() + logo_topo){
 					logo.addClass("fixa");
-				}else{
+				}
+				// ifs ocorrem simultaneamente, devo separa-los logicamente
+				if($(window).scrollTop() < $("#cabecalho").height() / 2){
 					logo.removeClass("fixa");
 				}
 		    });
