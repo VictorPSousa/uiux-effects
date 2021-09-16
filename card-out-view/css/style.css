@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+body, html{ 
+   overflow:hidden;
+   width:100vw; 
+   height:100vh;
+   font-family: 'Alfa Slab One', cursive;
+   padding: 0;
+   margin: 0;
+}
+
+#welcome-slide{
+   animation: backAn 200s infinite;
+   background: url('../img/jonathan-cooper-DyqwSc_tu8Y-unsplash.jpg');
+   background-color:#cdc8c4; 
+   padding:0; 
+   margin:0; 
+   width:100vw; 
+   height:100vh;
+   background-size: cover; /* new - auto 100%*/
+}
+
+#welcome-slide #grizzly{
+   mix-blend-mode: lighten; 
+   position: absolute; 
+   bottom:0; 
+   left: 10%; /* new */
+   width: auto; 
+   height: 100%;
+   /* width:100%; 
+   height:auto; */
+   z-index:2;
+}
+
+#welcome-slide #claim{
+   position:absolute; 
+   bottom:60px; 
+   left: calc(49% - 100px );
+   margin:auto; 
+   z-index: 3; 
+   color:#ccc7c3;
+}
+
+#welcome-slide #claim h1{
+   font-size: 1.2em; 
+   text-transform: uppercase;
+   margin: 0;
+   padding:0; 
+   font-weight: 400;
+   line-height: 0em; 
+   text-align: center;
+}
+
+#welcome-slide #claim h2{
+   font-size: 1.9em; 
+   text-transform: uppercase;
+   margin: 0;
+   padding:0; 
+   text-align: center;
+}
+
+@keyframes backAn{
+   0%   { background-position:0% 100%; }
+   50%   { background-position:100% 100%; }
+   100%   { background-position:0% 100%; }
+}
+
+.card{
+    width: 12rem;
+    height: auto;
+    background-color: #CBD7D7;
+    position: absolute;
+    top: 10%;
+    left: -7rem;
+    transition: .6s;
+    box-shadow: 1px 1px 3px #CBD7D7;
+    border-top-right-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+    padding: .8rem;
+    display: flex;
+}
+
+.card:hover{
+    left: 0;
+}
+
+.card button{
+    width: 45px;
+    height: 45px;
+    background: #aeb9b9;
+    border: none;
+    color: #CBD7D7;
+    border-radius: .1rem;
+    margin: 0 .1rem;
+    font-size: 20px;
+    transition: .8s;
+}
+
+.card button:hover{
+    background: #CBD7D7;
+    border: 1px solid #aeb9b9;
+    color: #aeb9b9;
+    cursor: pointer;
+}
