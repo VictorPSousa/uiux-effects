@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 body, html{ 
-   overflow:hidden;
+   overflow-x: hidden;
    width:100vw; 
    height:100vh;
    font-family: 'Alfa Slab One', cursive;
    padding: 0;
    margin: 0;
+}
+
+img{
+   user-select: none;
 }
 
 #welcome-slide{
@@ -33,9 +37,9 @@ body, html{
 }
 
 #welcome-slide #claim{
+   width: 100%;
    position:absolute; 
-   bottom:60px; 
-   left: calc(49% - 100px );
+   bottom: 60px; 
    margin:auto; 
    z-index: 3; 
    color:#ccc7c3;
@@ -47,7 +51,7 @@ body, html{
    margin: 0;
    padding:0; 
    font-weight: 400;
-   line-height: 0em; 
+   line-height: 1em; 
    text-align: center;
 }
 
