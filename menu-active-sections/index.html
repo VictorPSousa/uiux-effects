@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu interativo</title>
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            scroll-padding-top: 50px;
+        }
+
+        main{
+            margin-top: 50px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+        }
+    
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    
+        nav ul li {
+            margin: 0;
+        }
+    
+        nav ul li a {
+            display: block;
+            padding: 1rem;
+            color: #fff;
+            text-decoration: none;
+            transition: .6s;
+        }
+    
+        nav ul li a.active {
+            background-color: #fff;
+            color: #333;
+            transition: .6s;
+        }
+    
+        section{
+            height: 94.5vh;
+            border: 3px #333 solid;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+      
+    <main id="conteudo">
+        <section id="home">
+            <h1>Bem-vindo à minha página!</h1>
+        </section>
+        
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+        </section>
+        
+        <section id="servicos">
+            <h2>Serviços que ofereço</h2>
+        </section>
+        
+        <section id="contato">
+            <h2>Entre em contato</h2>
+        </section>
+    </main>
+    
+    <script>
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const sections = document.querySelectorAll('section');
+    
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(pageYOffset >= sectionTop - sectionHeight / 5)
+                    current = section.getAttribute('id');
+            });
+            
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                
+                if(link.getAttribute('href').slice(1) === current)
+                    link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
